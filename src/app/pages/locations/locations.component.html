@@ -1,0 +1,36 @@
+<div class="row title">
+    <h2>Fiche reservation</h2>
+    <button type="button" class="btn btn-danger ret" (click)="retour()" >Retour</button>
+</div>
+<div class="row">
+    <table class="table table-dark table-striped">
+        <thead>
+            <tr>
+                <th>Nom</th>
+                <th>Prénom</th>
+                <th>Modele</th>
+                <th>Marque</th>
+                <th>Matricule</th>
+                <th>Date</th>
+                <th>Tel°</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let res of reservations">
+                <td>{{res.client.nom}}</td>
+                <td>{{res.client.prenom}}</td>
+                <td>{{res.voiture.modele}}</td>
+                <td>{{res.voiture.marque}}</td>
+                <td>{{res.voiture.matricule}}</td>
+                <td>{{res.date|date:"dd/MM/YYYY"}}</td>
+                <td>{{res.client.tel}}</td>
+                <td class="actions">
+                    <button type="button" class="btn btn-primary" [routerLink]="['/detail-location',res.client.id,res.voiture.id]"  ><i class="fa-regular fa-eye"></i></button>
+                    <button type="button" class="btn btn-danger" (click)="supprimer(res.client.id,res.voiture.id)"  ><i class="fa-solid fa-trash"></i></button>                    
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+

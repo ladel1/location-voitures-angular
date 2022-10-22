@@ -1,0 +1,29 @@
+<div class="row title">
+    <h2>Detail client</h2>
+</div>
+<div class="row mt-5">
+        <div class="mb-3">
+            <label for="nom" class="form-label">Nom</label>
+            <input type="text" class="form-control" readonly [(ngModel)]="nom" id="nom">
+        </div>
+        <div class="mb-3">
+            <label for="prenom" class="form-label">Prenom</label>
+            <input type="text" class="form-control" readonly [(ngModel)]="prenom" id="prenom" >
+        </div> 
+        <div class="mb-3">
+            <label for="neph" class="form-label">NEPH</label>
+            <input type="text" class="form-control" readonly [(ngModel)]="neph" id="neph" >
+        </div>
+        <div class="mb-3">
+            <label for="adresse" class="form-label">Adresse</label>
+            <input type="text" class="form-control" readonly [(ngModel)]="adresse" id="adresse" >
+        </div>
+        <div class="mb-3">
+            <label for="tel" class="form-label">Tel°</label>
+            <input type="tel" class="form-control" readonly [(ngModel)]="tel" id="tel" >
+        </div>    
+        <div class="actions">
+            <button type="button" (click)="retour()" class="btn btn-danger" >Retour</button>
+        </div>                           
+</div>
+

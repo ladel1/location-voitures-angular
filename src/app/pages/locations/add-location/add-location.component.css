@@ -1,0 +1,12 @@
+.title{
+    text-align:center;
+    margin: 50px 0;
+}
+form{
+    width:50%;
+    margin:auto;
+}
+.actions{
+    display:flex;
+    gap: 30px;
+}

@@ -1,0 +1,15 @@
+.title{
+    text-align:center;
+    margin: 50px 0;
+}
+table{
+    width:50%;
+    margin:auto;
+}
+.actions{
+    display:flex;
+    gap: 10px;
+}
+.ret{
+    margin-top: 30px;
+}

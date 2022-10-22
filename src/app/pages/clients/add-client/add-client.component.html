@@ -1,0 +1,32 @@
+<div class="row title">
+    <h2>Ajouter un client</h2>
+</div>
+<div class="row">
+    <form [formGroup]="clientForm" (submit)="ajouter()"  >
+        <div class="mb-3">
+            <label for="nom" class="form-label">Nom</label>
+            <input type="text" class="form-control" formControlName="nom" id="nom">
+        </div>
+        <div class="mb-3">
+            <label for="prenom" class="form-label">Prenom</label>
+            <input type="text" class="form-control" formControlName="prenom" id="prenom" >
+        </div> 
+        <div class="mb-3">
+            <label for="neph" class="form-label">NEPH</label>
+            <input type="text" class="form-control" formControlName="neph" id="neph" >
+        </div>
+        <div class="mb-3">
+            <label for="adresse" class="form-label">Adresse</label>
+            <input type="text" class="form-control" formControlName="adresse" id="adresse" >
+        </div>
+        <div class="mb-3">
+            <label for="tel" class="form-label">Tel°</label>
+            <input type="tel" class="form-control" formControlName="tel" id="tel" >
+        </div>    
+        <div class="actions">
+            <button type="submit" class="btn btn-primary" >Ajouter</button>
+            <button type="button" (click)="retour()" class="btn btn-danger" >Retour</button>
+        </div>                           
+    </form>
+</div>
+

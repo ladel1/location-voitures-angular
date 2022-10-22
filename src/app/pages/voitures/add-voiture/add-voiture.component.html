@@ -1,0 +1,32 @@
+<div class="row title">
+    <h2>Ajouter une voiture</h2>
+</div>
+<div class="row">
+    <form [formGroup]="voitureForm" (submit)="ajouter()"  >
+        <div class="mb-3">
+            <label for="matricule" class="form-label">matricule</label>
+            <input type="text" class="form-control" formControlName="matricule" id="matricule">
+        </div>
+        <div class="mb-3">
+            <label for="modele" class="form-label">modele</label>
+            <input type="text" class="form-control" formControlName="modele" id="modele" >
+        </div> 
+        <div class="mb-3">
+            <label for="marque" class="form-label">marque</label>
+            <input type="text" class="form-control" formControlName="marque" id="marque" >
+        </div>
+        <div class="mb-3">
+            <label for="moteur" class="form-label">moteur</label>
+            <input type="text" class="form-control" formControlName="moteur" id="moteur" >
+        </div>
+        <div class="mb-3">
+            <label for="prix" class="form-label">prix°</label>
+            <input type="number" class="form-control" formControlName="prix" id="prix" >
+        </div>    
+        <div class="actions">
+            <button type="submit" class="btn btn-primary" >Ajouter</button>
+            <button type="button" (click)="retour()" class="btn btn-danger" >Retour</button>
+        </div>                           
+    </form>
+</div>
+

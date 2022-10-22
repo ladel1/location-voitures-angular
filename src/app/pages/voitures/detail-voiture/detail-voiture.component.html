@@ -1,0 +1,29 @@
+<div class="row title">
+    <h2>Detail Voiture</h2>
+</div>
+<div class="row mt-5">
+        <div class="mb-3">
+            <label for="matricule" class="form-label">matricule</label>
+            <input type="text" class="form-control" readonly [(ngModel)]="matricule" id="matricule">
+        </div>
+        <div class="mb-3">
+            <label for="modele" class="form-label">modele</label>
+            <input type="text" class="form-control" readonly [(ngModel)]="modele" id="modele" >
+        </div> 
+        <div class="mb-3">
+            <label for="marque" class="form-label">marque</label>
+            <input type="text" class="form-control" readonly [(ngModel)]="marque" id="marque" >
+        </div>
+        <div class="mb-3">
+            <label for="moteur" class="form-label">moteur</label>
+            <input type="text" class="form-control" readonly [(ngModel)]="moteur" id="moteur" >
+        </div>
+        <div class="mb-3">
+            <label for="prix" class="form-label">prix</label>
+            <input type="number" class="form-control" readonly [(ngModel)]="prix" id="prix" >
+        </div>    
+        <div class="actions">
+            <button type="button" (click)="retour()" class="btn btn-danger" >Retour</button>
+        </div>                           
+</div>
+

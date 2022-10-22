@@ -1,0 +1,32 @@
+
+<div class="row title">
+    <h2>Detail location</h2>
+</div>
+<div class="row">
+    <form  >
+        <div class="mb-3">
+            <label for="client" class="form-label">Client</label>            
+            <input type="text" class="form-control" readonly [value]="location.client.prenom"  id="date" >
+        </div>
+        <div class="mb-3">
+            <label for="voiture" class="form-label">Voiture</label>
+            <input type="text" class="form-control" readonly [value]="location.voiture.modele"  id="date" >
+        </div> 
+        <div class="mb-3">
+            <label for="date" class="form-label">Date</label>
+            <input type="date" class="form-control" readonly [value]="location.date|date:'yyyy-MM-dd'"  id="date" >
+        </div>
+        <div class="mb-3">
+            <label for="duree" class="form-label">Durée</label>
+            <input type="number" class="form-control" readonly step="1"  [value]="location.duree" id="duree" >
+        </div>
+        <div class="mb-3">
+            <label for="prix" class="form-label">Prix</label>
+            <input type="number" class="form-control" readonly  [value]="location.prix" step="0.01" id="prix" >
+        </div>    
+        <div class="actions">
+            <button type="button" (click)="retour()" class="btn btn-danger" >Retour</button>
+        </div>                           
+    </form>
+</div>
+

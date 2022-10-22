@@ -1,0 +1,37 @@
+
+<div class="row title">
+    <h2>Reserver une voiture</h2>
+</div>
+<div class="row">
+    <form [formGroup]="locationForm" (submit)="ajouter()"  >
+        <div class="mb-3">
+            <label for="client" class="form-label">Client</label>            
+            <select class="form-control form-select" formControlName="client">
+                <option *ngFor="let client of clients"  [value]="client.id">{{client.prenom}} {{client.nom}}</option>
+            </select>            
+        </div>
+        <div class="mb-3">
+            <label for="voiture" class="form-label">Voiture</label>
+            <select class="form-control form-select" formControlName="voiture">
+                <option *ngFor="let voiture of voitures"  [value]="voiture.id">{{voiture.marque}} , {{voiture.modele}}</option>
+            </select>  
+        </div> 
+        <div class="mb-3">
+            <label for="date" class="form-label">Date</label>
+            <input type="date" class="form-control" formControlName="date" id="date" >
+        </div>
+        <div class="mb-3">
+            <label for="duree" class="form-label">Durée</label>
+            <input type="number" class="form-control" step="1" formControlName="duree" id="duree" >
+        </div>
+        <div class="mb-3">
+            <label for="prix" class="form-label">Prix</label>
+            <input type="number" class="form-control" formControlName="prix" step="0.01" id="prix" >
+        </div>    
+        <div class="actions">
+            <button type="submit" class="btn btn-primary" >Ajouter</button>
+            <button type="button" (click)="retour()" class="btn btn-danger" >Retour</button>
+        </div>                           
+    </form>
+</div>
+
